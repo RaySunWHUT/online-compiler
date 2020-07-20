@@ -12,16 +12,16 @@
 
 1. **home**:
 
-   ![home]()
+   ![home](https://github.com/RaySunWHUT/online-compiler/blob/master/assets/home.png)
 
    
 
 2. **success**:
 
-   ![success]()
+   ![success](https://github.com/RaySunWHUT/online-compiler/blob/master/assets/success.png)
 
    
 
 3. **fail**:
 
-   ![fail]()
+   ![fail](https://github.com/RaySunWHUT/online-compiler/blob/master/assets/fail.png)
