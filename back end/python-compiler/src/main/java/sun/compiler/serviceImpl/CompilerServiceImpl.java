@@ -19,9 +19,9 @@ import java.io.IOException;
 public class CompilerServiceImpl implements CompilerService {
 
     @Override
-    public JSONObject compile(JSONObject pythonFile) throws IOException {
+    public JSONObject compile(JSONObject pythonCode) throws IOException {
 
-        String code = pythonFile.getString("code");
+        String code = pythonCode.getString("code");
 
         String directory = Constants.DATA_LOCATION;
 
@@ -33,8 +33,20 @@ public class CompilerServiceImpl implements CompilerService {
 
         File file = new File(absolutePath);
 
-        if (!file.exists()) {    // 若文件不存在, 则创建文件
+        // 返回的是File类型, 可以调用exist()等方法
+        File fileParent = file.getParentFile();
 
+        // 若文件不存在, 则创建文件
+        if (!fileParent.exists()) {
+
+            // 创建多级目录
+            fileParent.mkdirs();
+
+        }
+
+        if (!file.exists()) {
+
+            // 创建文件
             file.createNewFile();
 
             FileWriter fw = new FileWriter(absolutePath);
@@ -43,7 +55,6 @@ public class CompilerServiceImpl implements CompilerService {
             bfr.write(code);
             bfr.newLine();
             bfr.close();
-
         }
 
         String compile_result = CompilerUtil.compile(absolutePath);

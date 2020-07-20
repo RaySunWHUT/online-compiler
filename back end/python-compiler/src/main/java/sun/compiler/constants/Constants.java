@@ -18,7 +18,7 @@ public class Constants {
 
     public static final String GLOBAL_ERROR = "global error";
 
-    public static final String DATA_LOCATION = "E:\\tempDir\\";
+    public static final String DATA_LOCATION = "E:\\tempFile\\";
     public static final String SUFFIX = ".py";
 
 }

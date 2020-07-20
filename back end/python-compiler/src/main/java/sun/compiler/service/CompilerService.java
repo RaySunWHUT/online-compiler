@@ -6,6 +6,6 @@ import java.io.IOException;
 
 public interface CompilerService {
 
-    JSONObject compile(JSONObject pythonFile) throws IOException;
+    JSONObject compile(JSONObject pythonCode) throws IOException;
 
 }

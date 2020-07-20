@@ -23,9 +23,9 @@ public class CompilerController {
 
     @RequestMapping(value = {"/pythonInterface"}, method = RequestMethod.POST)
     @ResponseBody
-    public JSONObject compile(@RequestBody JSONObject pythonFile) throws IOException {
+    public JSONObject compile(@RequestBody JSONObject pythonCode) throws IOException {
 
-        return compilerService.compile(pythonFile);
+        return compilerService.compile(pythonCode);
 
     }
 
